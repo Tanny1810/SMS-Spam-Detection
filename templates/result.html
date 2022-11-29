@@ -2,8 +2,8 @@
 <html>
     <head>
         <title></title>
-        <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-        <link rel = "stylesheet" type="text/css" href="{{url_for('static', filename='styles.css') }}">
+        <!-- <link rel="stylesheet" type="text/css" href="static/styles.css"> -->
+        <link rel = "stylesheet" type="text/css" href="{{url_for('static', filename='styles.css') }}" />
     </head>
     <body>
         <header>
@@ -12,7 +12,7 @@
             </div>
         </header>
         
-        <p style="color: blue; font-size:20; text-align: center;"><b>Results for Comment</b></p>
+        <p style="color: black; font-size:25px;"><b>Results for Comment</b></p>
         <div class="results">
             {% if prediction == 1 %}
             <h2 style="color: red;"> Spam</h2>

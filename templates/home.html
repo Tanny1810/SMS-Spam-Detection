@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Home</title>
-        <!-- <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" /> -->
+        <!-- <link rel="stylesheet" type="text/css" href="static/styles.css" /> -->
         <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
     </head>
     <body>
@@ -14,10 +14,10 @@
         
         <div class="ml-container">
             <form action="{{ url_for('predict')}}" method="POST">
-                <p>Enter Your Message Here</p>
-                <textarea name="message" rows="4" cols="50"></textarea>
+                <p style="color: black; font-size:25px;">Enter Your Message Here</p>
+                <textarea style="font-size: 20px;" name="message" rows="6" cols="70"></textarea>
                 <br/>
-                <input type="submit" class="btn-info" value="predict">
+                <input style="font-size: 25px;" type="submit" class="btn-info" value="Predict">
             </form>
         </div>
     </body>

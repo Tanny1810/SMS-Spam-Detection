@@ -34,8 +34,12 @@ header h2{
     color: rgb(0, 0, 0);
 }
 
+textarea{ 
+    font-size: 18px; 
+}
+
 .btn-info {
-    background-color: #2196F3;
+    background-color: #70b2e7;
     height: 40px;
     width: 100px;
 }.btn-info:hover {
