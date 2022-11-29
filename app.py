@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 # from sklearn.externals import joblib
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 
 @app.route('/')
@@ -16,8 +16,9 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    df = pd.read_csv("spam.csv", encoding="latin-1")
-    df.drop(df[2:], axis=1, inplace=True)
+    df = pd.read_csv("/Tanmay/ML_Proj/sms_spam_classifier/spam.csv",
+                     encoding="latin-1")
+    df.drop(['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4'], axis=1, inplace=True)
     df['label'] = df['class'].map({'ham': 0, 'spam': 1})
     X = df['message']
     y = df['label']
@@ -30,13 +31,13 @@ def predict():
     clf = MultinomialNB()
     clf.fit(X_train, y_train)
     score = clf.score(X_test, y_test)
-    print(score)
+    # print(score)
     if request.method == 'POST':
         message = request.form['message']
         data = [message]
         vect = cv.transform(data).toarray()
         pred = clf.predict(vect)
-        print(pred)
+        # print(pred)
     return render_template('result.html', prediction=pred)
 
 

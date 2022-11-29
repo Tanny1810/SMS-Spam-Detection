@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    background: #03A9F4, #35434a;
+    background: #03A9F4;
     border-bottom: #448AFF 3px solid;
     height: 120px;
     width: 100%;
@@ -26,16 +26,12 @@ header{
     margin: 0px;
 }
 
-#brandname{
-    float:left;
-    font-size: 30px;
-    color: #fff;
-    margin: 10px;
-}
-
-h2{
+header h2{
     text-align: center;
-    color: #fff;
+    font-style: oblique;
+    font-size: 1000px;
+    font-family: "sarabun", sans-serif;
+    color: rgb(0, 0, 0);
 }
 
 .btn-info {
@@ -46,7 +42,7 @@ h2{
     background:#0b7dda;
 }
 
-.results{
+.resultss{
     border-radius: 15px 50px;
     background: #345fe4;
     padding: 20px;
