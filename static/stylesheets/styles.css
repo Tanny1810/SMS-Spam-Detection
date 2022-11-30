@@ -4,11 +4,11 @@ body{
     background-color: #f4f3f3;
 }
 
-.container{
+/* .container{
     width: 100%;
-    margin: auto;
+    margin: 100%;
     overflow: hidden;
-}
+} */
 
 header{
     background: #03A9F4;
@@ -29,7 +29,7 @@ header{
 header h2{
     text-align: center;
     font-style: oblique;
-    font-size: 1000px;
+    font-size: 100px;
     font-family: "sarabun", sans-serif;
     color: rgb(0, 0, 0);
 }
